@@ -94,3 +94,10 @@ The other usual testing flags are also available. See [the testing
 README](https://github.com/remzi-arpacidusseau/ostep-projects/blob/master/tester/README.md)
 for details.
 
+### solutions
+
+you can use these steps to get answers.
+```
+tar -xvf src.tar
+sh ./test-getreadcounts.sh
+```
