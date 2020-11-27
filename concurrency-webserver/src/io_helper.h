@@ -28,6 +28,9 @@ typedef struct sockaddr sockaddr_t;
 // http://gcc.gnu.org/onlinedocs/gcc/Statement-Exprs.html
 // macro ({ ...; x; }) returns value 'x' for caller
 // e.g., macro 'fork_or_die()' below returns 'pid' value
+#define dd1 printf("fork pid = %d, err=%s\n", pid, strerror(errno))
+#define dd2 printf("wait pid = %d, err=%s\n", pid, strerror(errno))
+#define dd3 printf("accept connd:%d, err:%s\n", rc, strerror(errno))
 #define fork_or_die() \
     ({ pid_t pid = fork(); assert(pid >= 0); pid; })
 #define execve_or_die(filename, argv, envp) \
